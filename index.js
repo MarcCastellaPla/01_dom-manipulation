@@ -22,9 +22,9 @@ content.style.backgroundColor = "lightgreen";
 // TODO: Remove the "highlight" class from the first paragraph after 3 seconds
 
 paragraph[0].classList.add("highlight");
-setTimeout(function () {
+setTimeout(function () { // This function adds 3 seconds delay to removing the class "highlight"
     paragraph[0].classList.remove("highlight");
-}, 2000);
+}, 3000);
 
  // EXERCISE 5: Creating and Appending Elements
  // Create a new <button> element with the text 'Click Me'.
@@ -32,7 +32,7 @@ setTimeout(function () {
 
  let button = document.createElement("button");
  button.textContent = "Click Me";
- document.getElementById("content").appendChild(button);
+ document.getElementById("content").appendChild(button); // Adding a button at the end of the element with id content.
 
  // EXERCISE 6: Removing Elements
  // Select the element with the ID 'result' and remove it from the DOM.
@@ -56,7 +56,7 @@ setTimeout(function () {
  let input = document.getElementById("inputField");
  input.addEventListener("input", function () {
 
-    result.innerText = input.value; 
+    result.innerText = input.value; // This doesn't work because the result div has been eliminated in exercice 6
 })
 
  // Exercise 9: Toggling Visibility
