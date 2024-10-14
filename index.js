@@ -9,7 +9,7 @@ console.log(mainTitle)
 // TODO: Select all paragraph elements and change the content of the second paragraph to "This paragraph has been changed."
 
 let paragraph = document.getElementsByClassName("paragraph");
-paragraph[1].innerHTML = "<p>Updated content</p>";
+paragraph[1].innerHTML = "<p>This paragraph has been changed.</p>";
 
 // EXERCISE 3: Changing CSS Styles
 // Change the background color of the element with the ID 'content' to 'lightgreen'.
@@ -56,9 +56,7 @@ setTimeout(function () {
  let input = document.getElementById("inputField");
  input.addEventListener("input", function () {
 
-    result.innerText = input.value;
-    console.log(input.value)
-
+    result.innerText = input.value; 
 })
 
  // Exercise 9: Toggling Visibility
@@ -74,4 +72,4 @@ actionButton.addEventListener("click", function() {
  // Exercise 10: Modifying Attributes
  // Select the input field and change its placeholder text to "Enter your name".
 
- input.placeholder = "Marc"
+input.placeholder = "Marc";
