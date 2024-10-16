@@ -9,7 +9,7 @@ console.log(mainTitle)
 // TODO: Select all paragraph elements and change the content of the second paragraph to "This paragraph has been changed."
 
 let paragraph = document.getElementsByClassName("paragraph");
-paragraph[1].innerHTML = "<p>This paragraph has been changed.</p>";
+paragraphsList[1].innerText = "This paragraph has been changed.";
 
 // EXERCISE 3: Changing CSS Styles
 // Change the background color of the element with the ID 'content' to 'lightgreen'.
@@ -21,8 +21,8 @@ content.style.backgroundColor = "lightgreen";
 // TODO: Add the "highlight" class to the first paragraph
 // TODO: Remove the "highlight" class from the first paragraph after 3 seconds
 
-paragraph[0].classList.add("highlight");
-setTimeout(function () { // This function adds 3 seconds delay to removing the class "highlight"
+paragraphsList[0].classList.add("highlight");
+setTimeout(function () { 
     paragraph[0].classList.remove("highlight");
 }, 3000);
 
@@ -32,7 +32,7 @@ setTimeout(function () { // This function adds 3 seconds delay to removing the c
 
  let button = document.createElement("button");
  button.textContent = "Click Me";
- document.getElementById("content").appendChild(button); // Adding a button at the end of the element with id content.
+ document.getElementById("content").appendChild(button); 
 
  // EXERCISE 6: Removing Elements
  // Select the element with the ID 'result' and remove it from the DOM.
@@ -45,7 +45,6 @@ setTimeout(function () { // This function adds 3 seconds delay to removing the c
  // When clicked, the button should alert "Button Clicked!".
 
  button.addEventListener("click", function () {
-
     alert("Button clicked!")
 
  })
@@ -55,8 +54,7 @@ setTimeout(function () { // This function adds 3 seconds delay to removing the c
 
  let input = document.getElementById("inputField");
  input.addEventListener("input", function () {
-
-    result.innerText = input.value; // This doesn't work because the result div has been eliminated in exercice 6
+    result.innerText = input.value;
 })
 
  // Exercise 9: Toggling Visibility
@@ -64,12 +62,11 @@ setTimeout(function () { // This function adds 3 seconds delay to removing the c
 
 let actionButton = document.getElementById("actionButton");
 actionButton.addEventListener("click", function() {
-
-    content.classList.add("hidden");
+    content.classList.toggle("hidden");
 
 })
 
  // Exercise 10: Modifying Attributes
  // Select the input field and change its placeholder text to "Enter your name".
 
-input.placeholder = "Marc";
+input.placeholder = "Enter your name";
