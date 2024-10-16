@@ -8,7 +8,7 @@ console.log(mainTitle)
 // Exercise 2: Changing HTML Content
 // TODO: Select all paragraph elements and change the content of the second paragraph to "This paragraph has been changed."
 
-let paragraph = document.getElementsByClassName("paragraph");
+let paragraphsList = document.getElementsByClassName("paragraph");
 paragraphsList[1].innerText = "This paragraph has been changed.";
 
 // EXERCISE 3: Changing CSS Styles
@@ -23,7 +23,7 @@ content.style.backgroundColor = "lightgreen";
 
 paragraphsList[0].classList.add("highlight");
 setTimeout(function () { 
-    paragraph[0].classList.remove("highlight");
+    paragraphsList[0].classList.remove("highlight");
 }, 3000);
 
  // EXERCISE 5: Creating and Appending Elements
